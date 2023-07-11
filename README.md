@@ -55,5 +55,5 @@ All the components that we have implemented can be found in the folder `/compone
 ----
 - Author: Diederik Blanson Henkemans
 - Master Thesis Software Engineering
-- Universiteit van Amsterdam (UvA)
-- 2023
+- University: Universiteit van Amsterdam (UvA)
+- Year: 2023
