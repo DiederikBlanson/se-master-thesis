@@ -14,7 +14,7 @@ class ResultsContainerization:
             - Executable: {}
             - Docker image created: {}
             - Image size: {}
-            - CodeInspection time: {:.1f}s
+            - CodeInspector time: {:.1f}s
             - Overall time: {:.1f}s
             - Error label: {}
         """.format(

@@ -27,7 +27,7 @@ def additional_commands(obj, file):
 
 class CodeInspector:
     def inspect(obj):
-        print("Starting the 'CodeInspection' =>")
+        print("Starting the 'CodeInspector' =>")
 
         result_folder_name = 'results/{}'.format(obj["source_folder"].split("/")[1])
         R_FILE_NAME_RAW = "myScript"

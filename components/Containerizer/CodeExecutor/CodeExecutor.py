@@ -24,7 +24,7 @@ def remove_formatting(string): # Remove leading and trailing whitespaces
 class CodeExecutor:
     def execute(obj, debug):
         result = obj
-        print("Starting the 'CodeExecution' =>")
+        print("Starting the 'CodeExecutor' =>")
 
         try:
             project_name = obj["source_folder"].split("/")[1]
@@ -124,5 +124,5 @@ class CodeExecutor:
             # Return result
             return result
         except Exception as e:
-            print("Error CodeExecution component: ", e)
+            print("Error CodeExecutor component: ", e)
             return result

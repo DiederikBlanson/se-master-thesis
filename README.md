@@ -47,8 +47,18 @@ In order to containerize the project, one should give the correct configurations
     5. `minimal-set`: Enabling the MinimalPackageSet component.
     6. `advanced-dependencies`: Enabling the HiddenDependencies component.
 
-### 3. Execute the tool
-The tool can be started with the command `python3 R-Containerizer.py config.json`. The results will be exported to the file `components/ResultsContainerization/db.csv`, where previous results are archived in `/final-data/results.csv`.
+### 3. Execute the script
+The tool can be started with the command `python3 R-Containerizer.py config.json`. First, a welcome message will be shown:
+<br>
+
+![Image Description](screenshots/welcome-msg.png)
+
+In the example `config.json`, two runs will be performed (1 project * 2 algorithms). A run will look as follows:
+<br>
+
+![Image Description](screenshots/run-traits.png)
+
+First, the configuration is displayed. Next, the CodeInspector is executed which is followed by the CodeExecutor. Finally, the results will be exported to the file `components/ResultsContainerization/db.csv`, where previous results are archived in `/final-data/results.csv`.
 
 ## Existing tools
 The analysis of several existing containerization tools for R can be found in the folder `/tools`.
