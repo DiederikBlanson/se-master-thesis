@@ -1,0 +1,1 @@
+time docker build --no-cache -t us-500 -f Dockerfile .

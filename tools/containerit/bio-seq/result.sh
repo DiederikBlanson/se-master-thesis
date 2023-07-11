@@ -1,0 +1,1 @@
+time docker build --no-cache -t bio-seq -f Dockerfile .

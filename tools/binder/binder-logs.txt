@@ -1,0 +1,213 @@
+Waiting for build to start...
+Picked Git content provider.
+Cloning into '/tmp/repo2dockereq2n2x6t'...
+HEAD is now at 7be16e3 new
+Python version unspecified, using current default Python version 3.10. This will change in the future.Building conda environment for python=3.10
+Using RBuildPack builder
+Step 1/63 : FROM buildpack-deps:bionic
+ ---> aeecfa359fe2
+Step 2/63 : ENV DEBIAN_FRONTEND=noninteractive
+ ---> Using cache
+ ---> dca6b0b4638a
+Step 3/63 : RUN apt-get -qq update &&     apt-get -qq install --yes --no-install-recommends locales > /dev/null &&     apt-get -qq purge &&     apt-get -qq clean &&     rm -rf /var/lib/apt/lists/*
+ ---> Using cache
+ ---> 343ffbf64021
+Step 4/63 : RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen &&     locale-gen
+ ---> Using cache
+ ---> da7afa6ecb81
+Step 5/63 : ENV LC_ALL=en_US.UTF-8     LANG=en_US.UTF-8     LANGUAGE=en_US.UTF-8
+ ---> Using cache
+ ---> 0f20acabfcd1
+Step 6/63 : ENV SHELL=/bin/bash
+ ---> Using cache
+ ---> be190d313842
+Step 7/63 : ARG NB_USER
+ ---> Using cache
+ ---> f02b5099a65b
+Step 8/63 : ARG NB_UID
+ ---> Using cache
+ ---> 506c6a24c585
+Step 9/63 : ENV USER=${NB_USER}     HOME=/home/${NB_USER}
+ ---> Using cache
+ ---> 6115acdbee49
+Step 10/63 : RUN groupadd         --gid ${NB_UID}         ${NB_USER} &&     useradd         --comment "Default user"         --create-home         --gid ${NB_UID}         --no-log-init         --shell /bin/bash         --uid ${NB_UID}         ${NB_USER}
+ ---> Using cache
+ ---> d0016bf25668
+Step 11/63 : RUN apt-get -qq update &&     apt-get -qq install --yes --no-install-recommends        less        unzip        > /dev/null &&     apt-get -qq purge &&     apt-get -qq clean &&     rm -rf /var/lib/apt/lists/*
+ ---> Using cache
+ ---> e8ee4ae348e7
+Step 12/63 : RUN apt-get -qq update &&     apt-get -qq install --yes        libapparmor1        lsb-release        psmisc        sudo        > /dev/null &&     apt-get -qq purge &&     apt-get -qq clean &&     rm -rf /var/lib/apt/lists/*
+ ---> Using cache
+ ---> b9fa46b96f1b
+Step 13/63 : EXPOSE 8888
+ ---> Using cache
+ ---> 6e2c6b31263a
+Step 14/63 : ENV APP_BASE=/srv
+ ---> Using cache
+ ---> 48f48bf37123
+Step 15/63 : ENV CONDA_DIR=${APP_BASE}/conda
+ ---> Using cache
+ ---> 4edc704be188
+Step 16/63 : ENV NB_PYTHON_PREFIX=${CONDA_DIR}/envs/notebook
+ ---> Using cache
+ ---> 820237c1825f
+Step 17/63 : ENV NPM_DIR=${APP_BASE}/npm
+ ---> Using cache
+ ---> e002b2ebe40a
+Step 18/63 : ENV NPM_CONFIG_GLOBALCONFIG=${NPM_DIR}/npmrc
+ ---> Using cache
+ ---> 1403fcd01aff
+Step 19/63 : ENV NB_ENVIRONMENT_FILE=/tmp/env/environment.lock
+ ---> Using cache
+ ---> 8bb917119ac9
+Step 20/63 : ENV MAMBA_ROOT_PREFIX=${CONDA_DIR}
+ ---> Using cache
+ ---> a1859dc217f3
+Step 21/63 : ENV MAMBA_EXE=${CONDA_DIR}/bin/mamba
+ ---> Using cache
+ ---> 617d4e7cd4e3
+Step 22/63 : ENV CONDA_PLATFORM=linux-64
+ ---> Using cache
+ ---> ed55fa513d15
+Step 23/63 : ENV KERNEL_PYTHON_PREFIX=${NB_PYTHON_PREFIX}
+ ---> Using cache
+ ---> c67123e44fbf
+Step 24/63 : ENV R_LIBS_USER=${APP_BASE}/rlibs
+ ---> Using cache
+ ---> 82a2ed0a56b6
+Step 25/63 : ENV PATH=${NB_PYTHON_PREFIX}/bin:${CONDA_DIR}/bin:${NPM_DIR}/bin:/usr/lib/rstudio-server/bin/:${PATH}
+ ---> Using cache
+ ---> aadae0fcde2c
+Step 26/63 : COPY --chown=1000:1000 build_script_files/-2fusr-2flib-2fpython3-2e10-2fsite-2dpackages-2frepo2docker-2fbuildpacks-2fconda-2factivate-2dconda-2esh-44e764 /etc/profile.d/activate-conda.sh
+ ---> Using cache
+ ---> 55cdeccafc28
+Step 27/63 : COPY --chown=1000:1000 build_script_files/-2fusr-2flib-2fpython3-2e10-2fsite-2dpackages-2frepo2docker-2fbuildpacks-2fconda-2fenvironment-2epy-2d3-2e10-2dlinux-2d64-2elock-388e0b /tmp/env/environment.lock
+ ---> Using cache
+ ---> 30dd776766de
+Step 28/63 : COPY --chown=1000:1000 build_script_files/-2fusr-2flib-2fpython3-2e10-2fsite-2dpackages-2frepo2docker-2fbuildpacks-2fconda-2finstall-2dbase-2denv-2ebash-e5509f /tmp/install-base-env.bash
+ ---> Using cache
+ ---> 24f73dc87252
+Step 29/63 : RUN TIMEFORMAT='time: %3R' bash -c 'time /tmp/install-base-env.bash' && rm -rf /tmp/install-base-env.bash /tmp/env
+ ---> Using cache
+ ---> d66ec55da1f0
+Step 30/63 : RUN mkdir -p ${NPM_DIR} && chown -R ${NB_USER}:${NB_USER} ${NPM_DIR}
+ ---> Using cache
+ ---> c5ef0810f168
+Step 31/63 : RUN apt-get update > /dev/null && apt-get install --yes --no-install-recommends         libclang-dev         libzmq3-dev > /dev/null && wget --quiet -O /tmp/r-4.2.1.deb     https://cdn.rstudio.com/r/ubuntu-$(. /etc/os-release && echo $VERSION_ID | sed 's/\.//')/pkgs/r-4.2.1_1_amd64.deb && apt install --yes --no-install-recommends /tmp/r-4.2.1.deb > /dev/null && rm /tmp/r-4.2.1.deb && apt-get -qq purge && apt-get -qq clean && rm -rf /var/lib/apt/lists/* && ln -s /opt/R/4.2.1/bin/R /usr/local/bin/R && ln -s /opt/R/4.2.1/bin/Rscript /usr/local/bin/Rscript && R --version
+ ---> Using cache
+ ---> 10ebbb3631a2
+Step 32/63 : RUN curl --silent --location --fail https://download2.rstudio.org/server/bionic/amd64/rstudio-server-2022.02.1-461-amd64.deb > /tmp/rstudio.deb && curl --silent --location --fail https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-1.5.17.973-amd64.deb > /tmp/shiny.deb && echo '239e8d93e103872e7c6d827113d88871965f82ffb0397f5638025100520d8a54 /tmp/rstudio.deb' | sha256sum -c - && echo '80f1e48f6c824be7ef9c843bb7911d4981ac7e8a963e0eff823936a8b28476ee /tmp/shiny.deb' | sha256sum -c - && apt-get update > /dev/null && apt install -y --no-install-recommends /tmp/rstudio.deb /tmp/shiny.deb && rm /tmp/*.deb && apt-get -qq purge && apt-get -qq clean && rm -rf /var/lib/apt/lists/*
+ ---> Using cache
+ ---> 1f8822e66e99
+Step 33/63 : USER ${NB_USER}
+ ---> Using cache
+ ---> d6ac85cf05b3
+Step 34/63 : RUN pip install --no-cache     jupyter-rsession-proxy==2.0.1     jupyter-shiny-proxy==1.1
+ ---> Using cache
+ ---> 40d6170e1e4f
+Step 35/63 : USER root
+ ---> Using cache
+ ---> 538cbcf2239e
+Step 36/63 : RUN install -o ${NB_USER} -g ${NB_USER} -d /var/log/shiny-server && install -o ${NB_USER} -g ${NB_USER} -d /var/lib/shiny-server && install -o ${NB_USER} -g ${NB_USER} /dev/null /var/log/shiny-server.log && install -o ${NB_USER} -g ${NB_USER} /dev/null /var/run/shiny-server.pid
+ ---> Using cache
+ ---> ebeeed2a925f
+Step 37/63 : RUN mkdir -p ${R_LIBS_USER} && chown -R ${NB_USER}:${NB_USER} ${R_LIBS_USER}
+ ---> Using cache
+ ---> e6a1ef1ff716
+Step 38/63 : RUN sed -i -e '/^R_LIBS_USER=/s/^/#/' /opt/R/4.2.1/lib/R/etc/Renviron && echo "R_LIBS_USER=${R_LIBS_USER}" >> /opt/R/4.2.1/lib/R/etc/Renviron
+ ---> Using cache
+ ---> a939691a0040
+Step 39/63 : RUN R RHOME && mkdir -p /etc/rstudio && echo 'options(repos = c(CRAN = "https://packagemanager.rstudio.com/all/__linux__/bionic/2022-01-01+u7Xr811p"))' > /opt/R/4.2.1/lib/R/etc/Rprofile.site && echo 'r-cran-repos=https://packagemanager.rstudio.com/all/__linux__/bionic/2022-01-01+u7Xr811p' > /etc/rstudio/rsession.conf
+ ---> Using cache
+ ---> e28cfdf74531
+Step 40/63 : USER ${NB_USER}
+ ---> Using cache
+ ---> 9ce4636cbcd7
+Step 41/63 : RUN R --quiet -e "install.packages(c('devtools', 'IRkernel', 'shiny'), repos='https://packagemanager.rstudio.com/all/__linux__/bionic/2022-01-04+Y3JhbiwyOjQ1MjYyMTU7NzlBRkJEMzg')" && R --quiet -e "IRkernel::installspec(prefix='$NB_PYTHON_PREFIX')"
+ ---> Using cache
+ ---> a7038e987ee0
+Step 42/63 : USER root
+ ---> Using cache
+ ---> 99b5b81b5f87
+Step 43/63 : ARG REPO_DIR=${HOME}
+ ---> Using cache
+ ---> 8f4e87aa7de8
+Step 44/63 : ENV REPO_DIR=${REPO_DIR}
+ ---> Using cache
+ ---> 0dc469925a2b
+Step 45/63 : RUN if [ ! -d "${REPO_DIR}" ]; then         /usr/bin/install -o ${NB_USER} -g ${NB_USER} -d "${REPO_DIR}";     fi
+ ---> Using cache
+ ---> 53bdcac5425d
+Step 46/63 : WORKDIR ${REPO_DIR}
+ ---> Using cache
+ ---> 87a4c65a4afb
+Step 47/63 : RUN chown ${NB_USER}:${NB_USER} ${REPO_DIR}
+ ---> Using cache
+ ---> 3a46cbcd255d
+Step 48/63 : ENV PATH=${HOME}/.local/bin:${REPO_DIR}/.local/bin:${PATH}
+ ---> Using cache
+ ---> dfc076ab56d3
+Step 49/63 : ENV CONDA_DEFAULT_ENV=${KERNEL_PYTHON_PREFIX}
+ ---> Using cache
+ ---> b6bcd7e7c185
+Step 50/63 : ENV R_HOME=/opt/R/4.2.1/lib/R
+ ---> Using cache
+ ---> f797c637ff0e
+Step 51/63 : ENV R_DOC_DIR=${R_HOME}/doc
+ ---> Using cache
+ ---> 6862cc084002
+Step 52/63 : ENV LD_LIBRARY_PATH=${R_HOME}/lib:${LD_LIBRARY_PATH}
+ ---> Using cache
+ ---> af9ccd244ce3
+Step 53/63 : USER root
+ ---> Using cache
+ ---> 8720da263c2e
+Step 54/63 : COPY --chown=1000:1000 src/ ${REPO_DIR}/
+ ---> 9781eea7d650
+Step 55/63 : LABEL repo2docker.ref="7be16e3021d63c2e685a57a270d496561bb30f49"
+ ---> Running in b31978eb2003
+Removing intermediate container b31978eb2003
+ ---> ad36f3552587
+Step 56/63 : LABEL repo2docker.repo="https://github.com/DiederikBlanson/binder-6"
+ ---> Running in 7f42d13bd464
+Removing intermediate container 7f42d13bd464
+ ---> b4c97e20f54b
+Step 57/63 : LABEL repo2docker.version="2022.10.0+148.g43ff7bb"
+ ---> Running in ea75b5d514ce
+Removing intermediate container ea75b5d514ce
+ ---> 43f7f9355add
+Step 58/63 : USER ${NB_USER}
+ ---> Running in e0919a18ba36
+Removing intermediate container e0919a18ba36
+ ---> 765440bd9340
+Step 59/63 : ENV PYTHONUNBUFFERED=1
+ ---> Running in 3eb1770ea83a
+Removing intermediate container 3eb1770ea83a
+ ---> 2685de9e70ac
+Step 60/63 : COPY /python3-login /usr/local/bin/python3-login
+ ---> 66bc893b1115
+Step 61/63 : COPY /repo2docker-entrypoint /usr/local/bin/repo2docker-entrypoint
+ ---> 7166993aaf13
+Step 62/63 : ENTRYPOINT ["/usr/local/bin/repo2docker-entrypoint"]
+ ---> Running in f9d6ce284ec0
+Removing intermediate container f9d6ce284ec0
+ ---> 790b1190bdb8
+Step 63/63 : CMD ["jupyter", "notebook", "--ip", "0.0.0.0"]
+ ---> Running in 8f263e686451
+Removing intermediate container 8f263e686451
+ ---> b0997892e124
+{"aux": {"ID": "sha256:b0997892e124581db930c4c16e53de5da8b232baff5c60b0f60d65dc7ee4cdc9"}}Successfully built b0997892e124
+Successfully tagged gcr.io/binderhub-288415/r2d-staging-g5b5b759-diederikblanson-2dbinder-2d6-4d97c8:7be16e3021d63c2e685a57a270d496561bb30f49
+Successfully pushed gcr.io/binderhub-288415/r2d-staging-g5b5b759-diederikblanson-2dbinder-2d6-4d97c8:7be16e3021d63c2e685a57a270d496561bb30f49Built image, launching...
+Launching server...
+Server requested
+2023-04-16T10:32:30.379130Z [Normal] Successfully assigned prod/jupyter-diederikblanson-2dbinder-2d6-2d3chu698z to gke-prod-user-202201-0769dbf8-9xxt
+2023-04-16T10:32:31Z [Normal] Container image "jupyterhub/mybinder.org-tc-init:2020.12.4-0.dev.git.4289.h140cef52" already present on machine
+2023-04-16T10:32:31Z [Normal] Created container tc-init
+2023-04-16T10:32:31Z [Normal] Started container tc-init
+2023-04-16T10:32:31Z [Normal] Pulling image "gcr.io/binderhub-288415/r2d-staging-g5b5b759-diederikblanson-2dbinder-2d6-4d97c8:7be16e3021d63c2e685a57a270d496561bb30f49"
+2023-04-16T10:33:06Z [Normal] Successfully pulled image "gcr.io/binderhub-288415/r2d-staging-g5b5b759-diederikblanson-2dbinder-2d6-4d97c8:7be16e3021d63c2e685a57a270d496561bb30f49" in 34.26489373s
+2023-04-16T10:33:06Z [Normal] Created container notebook
+2023-04-16T10:33:06Z [Normal] Started container notebook
+Server ready at /user/diederikblanson-binder-6-3chu698z/
+server running at https://hub.gke2.mybinder.org/user/diederikblanson-binder-6-3chu698z/

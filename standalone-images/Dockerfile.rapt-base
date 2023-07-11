@@ -1,0 +1,12 @@
+FROM rocker/r-apt:bionic
+
+USER root 
+
+RUN apt-get update && \ 
+    apt-get install -y -qq \ 
+		apt-utils \
+		r-cran-ncmisc \
+		r-cran-optparse \
+		r-cran-jsonlite
+
+RUN rm -rf /var/lib/apt/lists/*

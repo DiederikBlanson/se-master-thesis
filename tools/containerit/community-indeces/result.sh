@@ -1,0 +1,1 @@
+time docker build --no-cache -t community-indeces -f Dockerfile .

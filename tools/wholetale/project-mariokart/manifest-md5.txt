@@ -1,0 +1,2 @@
+bb47f29a9526cf999bcdbf796031b3ed data/workspace/myScript.r
+81faaedac351f28092bd845a48c6d0a5 data/LICENSE

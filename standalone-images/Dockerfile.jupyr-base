@@ -1,0 +1,7 @@
+FROM jupyter/r-notebook:70178b8e48d7
+
+USER root 
+
+RUN Rscript -e "options(repos = 'https://cran.rstudio.com/'); install.packages('NCmisc')"
+RUN Rscript -e "options(repos = 'https://cran.rstudio.com/'); install.packages('optparse')"
+RUN Rscript -e "options(repos = 'https://cran.rstudio.com/'); install.packages('jsonlite')"

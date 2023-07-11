@@ -1,0 +1,6 @@
+package,dependency_count,function_count
+caret,4,4
+dplyr,7,12
+ggplot2,7,33
+stringr,1,1
+tidyr,1,1

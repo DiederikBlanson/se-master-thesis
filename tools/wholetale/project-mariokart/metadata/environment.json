@@ -1,0 +1,31 @@
+{
+    "_accessLevel": -1,
+    "_id": "63a4c944835b40568e935abf",
+    "_modelType": "image",
+    "config": {
+        "buildpack": "RockerBuildPack",
+        "command": "/start.sh",
+        "environment": [
+            "WT_ROCKER_VER=4.1",
+            "WT_RSTUDIO_URL=https://github.com/whole-tale/rstudio/releases/download/v1.4.1106-wt/rstudio-server-1.4.1106-bionic-amd64.deb",
+            "WT_RSTUDIO_MD5=1d2bbd588f9a3ac00580939d4812a7d1",
+            "PASSWORD=R994ULxH-YYQz^mH"
+        ],
+        "memLimit": "8196m",
+        "port": 8787,
+        "targetMount": "/WholeTale",
+        "urlPath": "",
+        "user": "rstudio"
+    },
+    "created": "2022-12-22T21:16:52.083000+00:00",
+    "creatorId": "596444f0043dea00010d0c73",
+    "description": null,
+    "icon": "https://www.rstudio.com/wp-content/uploads/2014/06/RStudio-Ball.png",
+    "iframe": true,
+    "name": "RStudio (R 4.1)",
+    "parentId": null,
+    "public": true,
+    "tags": null,
+    "taleConfig": {},
+    "updated": "2022-12-22T21:16:52.083000+00:00"
+}

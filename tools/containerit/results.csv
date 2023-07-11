@@ -1,0 +1,10 @@
+project,base,size,time,executable
+data-filtering,rocker/r-apt:bionic,625MB,2m51s,1
+community-indeces,rocker/r-apt:bionic,606MB,0m48s,1
+community-matrix,rocker/r-apt:bionic,687MB,6m26s,1
+size-class,rocker/r-apt:bionic,640MB,3m53s,1
+size-density,rocker/r-apt:bionic,627MB,4m49s,1
+traits-computation,rocker/r-apt:bionic,600MB,0m2s,1
+us-500,rocker/r-apt:bionic,694MB,9m18s,1
+mario-kart,rocker/r-apt:bionic,658MB,3m52s,0
+bio-seq,rocker/r-apt:bionic,615MB,1m1s,0

@@ -1,0 +1,85 @@
+{
+    "@context": [
+        "https://w3id.org/bundle/context",
+        {
+            "schema": "http://schema.org/"
+        },
+        {
+            "datacite": "https://schema.datacite.org/meta/kernel-4.3/#"
+        },
+        {
+            "wt": "https://vocabularies.wholetale.org/wt/1.1/"
+        },
+        {
+            "@base": "arcp://uid,646f8bdbf6074a2c54976184/data/"
+        }
+    ],
+    "@id": "https://data.wholetale.org/api/v1/tale/646f8a1cf6074a2c54976149",
+    "@type": "wt:Tale",
+    "aggregates": [
+        {
+            "uri": "./workspace/myScript.r",
+            "wt:md5": "bb47f29a9526cf999bcdbf796031b3ed",
+            "wt:mimeType": "text/plain",
+            "wt:size": 581
+        },
+        {
+            "schema:license": "CC-BY-4.0",
+            "uri": "./LICENSE",
+            "wt:md5": "81faaedac351f28092bd845a48c6d0a5",
+            "wt:mimeType": "text/plain",
+            "wt:size": 170
+        }
+    ],
+    "createdBy": {
+        "@id": "mailto:diederikblanson@gmail.com",
+        "@type": "schema:Person",
+        "schema:email": "diederikblanson@gmail.com",
+        "schema:familyName": "Diederik",
+        "schema:givenName": "Diederik"
+    },
+    "createdOn": "2023-05-25 16:17:32.103000",
+    "datacite:relatedIdentifiers": [],
+    "dct:hasVersion": {
+        "@id": "https://data.wholetale.org/api/v1/folder/646f8bdbf6074a2c54976184",
+        "@type": "wt:TaleVersion",
+        "schema:creator": {
+            "@id": "mailto:diederikblanson@gmail.com",
+            "@type": "schema:Person",
+            "schema:email": "diederikblanson@gmail.com",
+            "schema:familyName": "Diederik",
+            "schema:givenName": "Diederik"
+        },
+        "schema:dateCreated": "2023-05-25T16:24:59.716000+00:00",
+        "schema:dateModified": "2023-05-25T16:25:00.704000+00:00",
+        "schema:name": "Thu May 25 16:24:57 2023"
+    },
+    "schema:author": [
+        {
+            "@id": "https://orcid.org/0000-0000-0000-0000",
+            "@type": "schema:Person",
+            "schema:familyName": "Diederik",
+            "schema:givenName": "Diederik"
+        }
+    ],
+    "schema:description": "### Provide a description for your Tale",
+    "schema:hasPart": [
+        {
+            "@id": "https://github.com/whole-tale/repo2docker_wholetale",
+            "@type": "schema:SoftwareApplication",
+            "schema:softwareVersion": "wholetale/repo2docker_wholetale:v1.2.1"
+        },
+        {
+            "@id": "images.wholetale.org/tale/69296a0750c0823234aba7f8383a2ee5:a95b866534e62bc260e044f294957d4e",
+            "@type": "schema:SoftwareApplication",
+            "schema:applicationCategory": "DockerImage"
+        }
+    ],
+    "schema:image": "https://raw.githubusercontent.com/whole-tale/dashboard/master/public/images/demo-graph2.jpg",
+    "schema:keywords": "science",
+    "schema:name": "mario",
+    "schema:schemaVersion": 9,
+    "wt:hasRecordedRuns": [],
+    "wt:identifier": "646f8a1cf6074a2c54976149",
+    "wt:usesDataset": []
+}

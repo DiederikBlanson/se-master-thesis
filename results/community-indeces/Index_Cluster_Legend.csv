@@ -1,0 +1,55 @@
+;country;locality;year;month;day;parenteventid;eventid
+Cluster 1;australia;magnetic island;2011;3;4; 1;a
+Cluster 2;australia;magnetic island;2011;3;4; 1;b
+Cluster 3;australia;magnetic island;2011;3;4; 1;c
+Cluster 4;australia;magnetic island;2011;3;4; 2;a
+Cluster 5;australia;magnetic island;2011;3;4; 2;b
+Cluster 6;australia;magnetic island;2011;3;4; 2;c
+Cluster 7;australia;magnetic island;2011;3;4; 3;a
+Cluster 8;australia;magnetic island;2011;3;4; 3;b
+Cluster 9;australia;magnetic island;2011;3;4; 3;c
+Cluster 10;australia;magnetic island;2011;3;4; 4;a
+Cluster 11;australia;magnetic island;2011;3;4; 4;b
+Cluster 12;australia;magnetic island;2011;3;4; 4;c
+Cluster 13;australia;magnetic island;2011;3;4; 5;a
+Cluster 14;australia;magnetic island;2011;3;4; 5;b
+Cluster 15;australia;magnetic island;2011;3;4; 5;c
+Cluster 16;australia;magnetic island;2011;3;4; 6;a
+Cluster 17;australia;magnetic island;2011;3;4; 6;b
+Cluster 18;australia;magnetic island;2011;3;4; 6;c
+Cluster 19;australia;magnetic island;2011;3;4; 7;a
+Cluster 20;australia;magnetic island;2011;3;4; 7;b
+Cluster 21;australia;magnetic island;2011;3;4; 7;c
+Cluster 22;australia;magnetic island;2011;3;4; 8;a
+Cluster 23;australia;magnetic island;2011;3;4; 8;b
+Cluster 24;australia;magnetic island;2011;3;4; 8;c
+Cluster 25;australia;magnetic island;2011;3;4; 9;a
+Cluster 26;australia;magnetic island;2011;3;4; 9;b
+Cluster 27;australia;magnetic island;2011;3;4; 9;c
+Cluster 28;australia;magnetic island;2011;3;4;10;a
+Cluster 29;australia;magnetic island;2011;3;4;10;b
+Cluster 30;australia;magnetic island;2011;3;4;10;c
+Cluster 31;australia;magnetic island;2011;3;4;11;a
+Cluster 32;australia;magnetic island;2011;3;4;11;b
+Cluster 33;australia;magnetic island;2011;3;4;11;c
+Cluster 34;australia;magnetic island;2011;3;4;12;a
+Cluster 35;australia;magnetic island;2011;3;4;12;b
+Cluster 36;australia;magnetic island;2011;3;4;12;c
+Cluster 37;australia;ocean pacific;2011;3;4;13;a
+Cluster 38;australia;ocean pacific;2011;3;4;13;b
+Cluster 39;australia;ocean pacific;2011;3;4;13;c
+Cluster 40;australia;ocean pacific;2011;3;4;14;a
+Cluster 41;australia;ocean pacific;2011;3;4;14;b
+Cluster 42;australia;ocean pacific;2011;3;4;14;c
+Cluster 43;australia;ocean pacific;2011;3;4;15;a
+Cluster 44;australia;ocean pacific;2011;3;4;15;b
+Cluster 45;australia;ocean pacific;2011;3;4;15;c
+Cluster 46;australia;ocean pacific;2011;3;4;16;a
+Cluster 47;australia;ocean pacific;2011;3;4;16;b
+Cluster 48;australia;ocean pacific;2011;3;4;16;c
+Cluster 49;australia;ocean pacific;2011;3;4;17;a
+Cluster 50;australia;ocean pacific;2011;3;4;17;b
+Cluster 51;australia;ocean pacific;2011;3;4;17;c
+Cluster 52;australia;ocean pacific;2011;3;4;18;a
+Cluster 53;australia;ocean pacific;2011;3;4;18;b
+Cluster 54;australia;ocean pacific;2011;3;4;18;c

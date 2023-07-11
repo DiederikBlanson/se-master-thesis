@@ -1,0 +1,23 @@
+{
+    "projects": [{
+        "source_folder": "rdb/traits-computation",
+        "docker_image_name": "traits-computation"
+    }],
+    "algorithms": [{
+        "base_image": "jupyr-base",
+        "package_extraction": "renv",
+        "dependency_installation": "smart",
+        "ms-base-image": 1,
+        "minimal-set": 0,
+        "advanced-dependencies": 1,
+        "extended-base": 0
+    },{
+        "base_image": "rapt-base",
+        "package_extraction": "renv",
+        "dependency_installation": "all-only-source",
+        "ms-base-image": 1,
+        "minimal-set": 0,
+        "advanced-dependencies": 1,
+        "extended-base": 0
+    }]
+}

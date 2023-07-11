@@ -1,0 +1,25 @@
+---
+title: "containerit demo R Markdown file"
+author: "Daniel Nüst"
+date: "16/07/2019"
+output: html_document
+liftr:
+  from: "rocker/r-base:latest"
+  maintainer: "Matthew Harris"
+  email: "me@me.com"
+  cran:
+    - dplyr
+    - stringr
+---
+
+```{r math}
+1 + 1
+```
+
+```{r package-a}
+library("dplyr")
+```
+
+```{r package-b}
+library("stringr")
+```

@@ -1,0 +1,20 @@
+Project,Cell,Lines,Time (Native-Python),Time (Native-R),Time (Δ),Speedup (in %)
+data-filtering,1,30,11.178,1.613,00m09.565s,85.6
+data-filtering,2,32,8.364,1.307,00m07.057s,84.4
+data-filtering,3,27,8.194,0.873,00m07.321s,89.3
+data-filtering,4,27,8.601,0.868,00m07.733s,89.9
+data-filtering,5,9,6.93,0.481,00m06.449s,93.1
+traits-computation,1,26,20.499,2.135,00m18.364s,89.6
+traits-computation,2,30,9.656,1.448,00m08.208s,85.0
+traits-computation,3,32,9.529,1.345,00m08.184s,85.9
+traits-computation,4,28,10.134,1.54,00m08.594s,84.8
+traits-computation,5,41,12.359,1.628,00m10.731s,86.8
+traits-computation,6,10,9.049,1.257,00m07.792s,86.1
+traits-computation,7,32,9.591,1.525,00m08.066s,84.1
+traits-computation,8,10,8.875,1.217,00m07.658s,86.3
+traits-computation,9,10,9.234,1.432,00m07.802s,84.5
+traits-computation,10,41,14.504,2.712,00m11.792s,81.3
+size-density,1,27,13.169,1.842,00m11.327s,86.0
+size-density,2,142,100.961,12.104,01m28.857s,88.0
+size-class,1,23,7.768,0.901,00m06.867s,88.4
+size-class,2,64,35.427,4.074,00m31.353s,88.5

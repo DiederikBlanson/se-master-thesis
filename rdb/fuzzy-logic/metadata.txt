@@ -1,0 +1,1 @@
+source=https://github.com/PacktPublishing/R-Data-Analysis-Projects/blob/master/Chapter02/scripts/FuzzyLogic/exploreData.R

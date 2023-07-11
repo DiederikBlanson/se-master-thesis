@@ -1,0 +1,19 @@
+Project,Base-mage,Old dep.,New dep.,Time (Δ),Speedup (in %)
+rdb/data-filtering,jupyr-base,4.0,0,02m18.872s,98.2
+rdb/data-filtering,rapt-base,4.0,1,-00m02.442s,-14.8
+rdb/data-filtering,rver-base,4.0,1,00m01.647s,2.4
+rdb/community-indeces,jupyr-base,4.0,1,00m22.774s,29.6
+rdb/community-indeces,rapt-base,4.0,1,00m01.843s,10.4
+rdb/community-indeces,rver-base,4.0,1,00m06.466s,29.7
+rdb/community-matrix,jupyr-base,5.0,2,00m40.602s,24.1
+rdb/community-matrix,rapt-base,5.0,2,00m03.994s,11.1
+rdb/community-matrix,rver-base,5.0,2,00m53.279s,37.9
+rdb/size-class,jupyr-base,5.0,0,02m40.416s,98.5
+rdb/size-class,rapt-base,5.0,2,00m01.023s,5.2
+rdb/size-class,rver-base,5.0,2,00m32.113s,39.6
+rdb/size-density,jupyr-base,5.0,1,02m27.227s,94.0
+rdb/size-density,rapt-base,5.0,2,00m23.404s,55.1
+rdb/size-density,rver-base,5.0,2,00m35.345s,39.9
+rdb/traits-computation,jupyr-base,3.0,0,00m28.950s,90.3
+rdb/traits-computation,rapt-base,3.0,0,00m08.322s,76.0
+rdb/traits-computation,rver-base,3.0,0,00m13.989s,84.9

@@ -1,0 +1,9 @@
+FROM rocker/r-ver:4.1.1
+
+USER root 
+
+RUN install2.r --error \ 
+	NCmisc \
+	optparse \
+	jsonlite
+RUN strip /usr/local/lib/R/site-library/*/libs/*.so 

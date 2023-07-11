@@ -1,0 +1,8 @@
+container_name: liftr_container_319ace53_525f_47e5_aeeb_59240ed7e3a4
+image_name: demo
+docker_build_cmd: docker build --no-cache=false --rm=true  -t="demo" /Users/diederik/Desktop/master-thesis/tools/liftr/community-indeces
+docker_run_cmd: docker run --rm  --name "liftr_container_319ace53_525f_47e5_aeeb_59240ed7e3a4"
+  -u `id -u $USER` -v "/Users/diederik/Desktop/master-thesis/tools/liftr/community-indeces:/liftrroot/"
+  demo Rscript -e "library('knitr');library('rmarkdown');library('shiny');setwd('/liftrroot/');render(input
+  = 'demo.Rmd')"
+

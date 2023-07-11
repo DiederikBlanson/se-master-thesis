@@ -1,0 +1,8 @@
+container_name: liftr_container_b576ffb8_8d7e_4800_93e6_4e03683de4ee
+image_name: demo
+docker_build_cmd: docker build --no-cache=false --rm=true  -t="demo" /Users/diederik/Desktop/master-thesis/tools/liftr/size-density
+docker_run_cmd: docker run --rm  --name "liftr_container_b576ffb8_8d7e_4800_93e6_4e03683de4ee"
+  -u `id -u $USER` -v "/Users/diederik/Desktop/master-thesis/tools/liftr/size-density:/liftrroot/"
+  demo Rscript -e "library('knitr');library('rmarkdown');library('shiny');setwd('/liftrroot/');render(input
+  = 'demo.Rmd')"
+
