@@ -1,5 +1,10 @@
 # Documentation 'R-Containerizer'
+- Author: Diederik Blanson Henkemans
+- Master Thesis Software Engineering
+- University: Universiteit van Amsterdam (UvA)
+- Year: 2023
 
+---
 Welcome to 'R-Containerizer'! This tool is designed to facilitate the containerization of R scripts, providing a streamlined process for packaging and running R projects. This documentation will guide you through the installation process and explain how to use 'R-Containerizer' to containerize your projects. 
 
 ## Installation
@@ -50,10 +55,3 @@ The analysis of several existing containerization tools for R can be found in th
 
 ## Components
 All the components that we have implemented can be found in the folder `/components`.
-
-
-----
-- Author: Diederik Blanson Henkemans
-- Master Thesis Software Engineering
-- University: Universiteit van Amsterdam (UvA)
-- Year: 2023
