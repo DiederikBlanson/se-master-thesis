@@ -9,3 +9,5 @@ rdb/traits-computation,jupyr-base,traits-computation,2505463553,renv,smart,1,1,0
 rdb/traits-computation,rapt-base,traits-computation,661960374,renv,all-only-source,1,1,0m2.504s,0m0.114s,0m0.090s,0,3,1,0,1,0,7.671220064163208,22.102790117263794,-,-,
 rdb/traits-computation,jupyr-base,traits-computation,2505463553,renv,smart,1,1,0m3.249s,0m0.123s,0m0.107s,0,3,1,0,1,0,7.661240100860596,23.87015175819397,-,-,
 rdb/traits-computation,rapt-base,traits-computation,661960374,renv,all-only-source,1,1,0m2.784s,0m0.127s,0m0.091s,0,3,1,0,1,0,9.214318752288818,26.26535177230835,-,-,
+rdb/traits-computation,jupyr-base,traits-computation,-,renv,smart,0,0,-,-,-,0,3,1,0,1,0,5.275246858596802,5.641255855560303,-,b'',
+rdb/traits-computation,rapt-base,traits-computation,-,renv,all-only-source,0,0,-,-,-,0,3,1,0,1,0,5.232991933822632,5.233232021331787,-,b'',

@@ -62,12 +62,12 @@ class RepositoryLocator:
     def get_package_details(package):
 
         # Step 1: Check if package is available in the kernel (TODO: prevent output to terminal)
-        # try:
-        #     res = robjects.r("packageDescription('{}')".format(package))
-        #     if res['Repository'] is not None:
-        #         return res['Repository']
-        # except Exception as e:
-        #     pass
+        try:
+            res = robjects.r("packageDescription('{}')".format(package))
+            if res['Repository'] is not None:
+                return res['Repository']
+        except Exception as e:
+            pass
 
         # Step 2: Check Repository MetaData
         repos = packages_repositories()
@@ -99,7 +99,7 @@ class RepositoryLocator:
             if len(items) == 0:
                 raise Exception("")
 
-            # TODO: Naive way: grab the first repository
+            # Naive way: grab the first repository
             repo = items[0]
 
             # insert data in MetadataDB
