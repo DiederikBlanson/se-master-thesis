@@ -4,7 +4,6 @@
         "docker_image_name": "traits-computation"
     }],
     "algorithms": [{
-        "base_image": "jupyr-base",
         "package_extraction": "renv",
         "dependency_installation": "smart",
         "ms-base-image": 1,

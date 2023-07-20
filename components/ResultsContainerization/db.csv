@@ -1,13 +1,5 @@
 source_folder,base_image,docker_image_name,image_size,package_extraction,dependency_installation,dockerfile_generated,executable,dockergeneration-time-real,dockergeneration-time-user,dockergeneration-time-sys,detected_dependencies,installed_dependencies,ms-base-image,minimal-set,advanced-dependencies,extended-base,code-inspection-time,overall-time,execution-error,dockerfile-error,error-label
-rdb/traits-computation,jupyr-base,traits-computation,2505463553,renv,all-only-source,1,1,0m3.177s,0m0.156s,0m0.111s,0,3,1,0,1,0,8.708760023117065,28.676759719848633,-,-,
-
-rdb/traits-computation,jupyr-base,traits-computation,2505463553,renv,smart,1,1,0m2.486s,0m0.124s,0m0.106s,0,3,1,0,1,0,10.439496040344238,22.36731719970703,-,-,
-rdb/traits-computation,rapt-base,traits-computation,661960374,renv,all-only-source,1,1,0m2.880s,0m0.129s,0m0.085s,0,3,1,0,1,0,7.293771028518677,25.508896112442017,-,-,
-rdb/traits-computation,jupyr-base,traits-computation,2505463553,renv,smart,1,1,0m3.241s,0m0.161s,0m0.125s,0,3,1,0,1,0,7.509706020355225,20.642438173294067,-,-,
-rdb/traits-computation,rapt-base,traits-computation,661960374,renv,all-only-source,1,1,0m3.538s,0m0.124s,0m0.079s,0,3,1,0,1,0,7.4937708377838135,21.87626004219055,-,-,
-rdb/traits-computation,jupyr-base,traits-computation,2505463553,renv,smart,1,1,0m2.642s,0m0.143s,0m0.105s,0,3,1,0,1,0,9.289388179779053,23.65980815887451,-,-,
-rdb/traits-computation,rapt-base,traits-computation,661960374,renv,all-only-source,1,1,0m2.504s,0m0.114s,0m0.090s,0,3,1,0,1,0,7.671220064163208,22.102790117263794,-,-,
-rdb/traits-computation,jupyr-base,traits-computation,2505463553,renv,smart,1,1,0m3.249s,0m0.123s,0m0.107s,0,3,1,0,1,0,7.661240100860596,23.87015175819397,-,-,
-rdb/traits-computation,rapt-base,traits-computation,661960374,renv,all-only-source,1,1,0m2.784s,0m0.127s,0m0.091s,0,3,1,0,1,0,9.214318752288818,26.26535177230835,-,-,
-rdb/traits-computation,jupyr-base,traits-computation,-,renv,smart,0,0,-,-,-,0,3,1,0,1,0,5.275246858596802,5.641255855560303,-,b'',
-rdb/traits-computation,rapt-base,traits-computation,-,renv,all-only-source,0,0,-,-,-,0,3,1,0,1,0,5.232991933822632,5.233232021331787,-,b'',
+rdb/traits-computation,jupyr-base,traits-computation,2505463553,renv,smart,1,1,0m5.941s,0m0.174s,0m0.139s,0,3,1,0,1,0,25.514752864837646,68.37383484840393,-,-,
+rdb/traits-computation,rapt-base,traits-computation,661960374,renv,all-only-source,1,1,0m4.350s,0m0.179s,0m0.134s,0,3,1,0,1,0,20.842769861221313,50.93382406234741,-,-,
+rdb/traits-computation,rapt-base,traits-computation,661960374,renv,smart,1,1,0m6.358s,0m0.171s,0m0.133s,0,3,1,0,1,0,19.155317068099976,55.47649836540222,-,-,
+rdb/traits-computation,rapt-base,traits-computation,661960374,renv,all-only-source,1,1,0m3.773s,0m0.173s,0m0.116s,0,3,1,0,1,0,21.878578186035156,52.40166091918945,-,-,
